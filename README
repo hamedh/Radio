@@ -1,0 +1,27 @@
+== iPhone Radio App
+By Hamed Hashemi
+http://www.coolestan.com
+
+== Description
+
+This project is the streaming part of the "Radio Javan" app that appears in the App Store. The code here streams an Icecast stream (based on the URL), plays out the music to the audio device on the iPhone, and reads the metadata from the stream as the now playing title changes. If you like to use a Shoutcast stream, there will be some small modifications needed to read/parse the metadata and initial HTTP headers appropriately.
+
+== Usage
+
+Instantiate the Radio class:
+
+radio = [[Radio alloc] init];
+
+Connect to an Icecast stream:
+
+[radio connect:@"http://stream.radiojavan.com/radiojavan" withDelegate:self withGain:(0.5)];
+
+The example in iPhoneRadioAppDelegate shows how to use the Radio class and also use the delegate callbacks to update the view.
+
+== Requirements
+
+The iPhone SDK
+
+== License
+
+Released under GPL license, Please refer to gpl.txt
