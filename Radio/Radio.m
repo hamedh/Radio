@@ -197,8 +197,10 @@
 #pragma mark - core audio processing
 
 static void audioQueueCallBack(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer) {
-    Radio *streamer = (__bridge Radio *)inUserData;
-    [streamer handleAudioQueueCallBack:inAQ withBuffer:inBuffer];
+    @autoreleasepool {
+        Radio *streamer = (__bridge Radio *)inUserData;
+        [streamer handleAudioQueueCallBack:inAQ withBuffer:inBuffer];
+    }
 }
 
 - (void)handleAudioQueueCallBack:(AudioQueueRef)inAQ withBuffer:(AudioQueueBufferRef)inBuffer {
@@ -218,8 +220,7 @@ static void audioQueueCallBack(void *inUserData, AudioQueueRef inAQ, AudioQueueB
 			NSData *data = [packet audioData];
 			if ([data length]+inBuffer->mAudioDataByteSize < kAudioBufferSize) {
 				packet = [queue returnAndRemoveOldest];
-				data = [packet audioData];
-				memcpy((char*)inBuffer->mAudioData+inBuffer->mAudioDataByteSize, (const char*)[data bytes], [data length]);
+                memcpy((char*)inBuffer->mAudioData+inBuffer->mAudioDataByteSize, (const char*)[data bytes], [data length]);
 				audioDescriptions[numDescriptions] = [packet audioDescription];
 				audioDescriptions[numDescriptions].mStartOffset = inBuffer->mAudioDataByteSize;
 				inBuffer->mAudioDataByteSize += [data length];
@@ -265,9 +266,9 @@ static void PropertyListener(void *inClientData,
 }
 
 - (void)handlePropertlyListener:(AudioFileStreamID)inAudioFileStream fileStreamPropertyID:(AudioFileStreamPropertyID)inPropertyID ioFlags:(UInt32 *)ioFlags {
-
+    
     OSStatus err = noErr;
-
+    
     if (inPropertyID == kAudioFileStreamProperty_ReadyToProducePackets) {
         NSError *audio_error;
         [[AVAudioSession sharedInstance] setActive:YES error:&audio_error];
@@ -308,7 +309,7 @@ static void PacketsProc(void *inClientData,
 }
 
 - (void)handlePacketsProc:(const void *)inInputData numberBytes:(UInt32)inNumberBytes numberPackets:(UInt32)inNumberPackets packetDescriptions:(AudioStreamPacketDescription *)inPacketDescriptions {
-
+    
     for (int i = 0; i < inNumberPackets; ++i) {
 		Packet *packet = [[Packet alloc] init];
 		AudioStreamPacketDescription description = inPacketDescriptions[i];
@@ -342,7 +343,7 @@ static void PacketsProc(void *inClientData,
 			}
 		}
 	}
-
+    
 }
 
 - (void)processAudio: (const char*)buffer withLength:(NSInteger)length {
@@ -397,7 +398,6 @@ static void PacketsProc(void *inClientData,
                 if (radioDelegate && [radioDelegate respondsToSelector:@selector(metaTitleUpdated:)]) {
                     [radioDelegate metaTitleUpdated:title];
                 }
-                //				[NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(updateTitle) userInfo:nil repeats:NO];
 				[metaData setLength:0];
 			}
 		}
@@ -543,7 +543,7 @@ static void PacketsProc(void *inClientData,
     packetQueue = nil;
     currentPacket = nil;
     metaData = nil;
-
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
