@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B105662183DAAC900109B63 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0B105661183DAAC900109B63 /* LICENSE */; };
+		0B105664183DAC4500109B63 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B105663183DAC4500109B63 /* README.md */; };
+		0B20D498183AB73A00BA4F12 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B20D497183AB73A00BA4F12 /* Queue.m */; };
+		0B20D49B183AB98200BA4F12 /* Radio.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B20D49A183AB98200BA4F12 /* Radio.m */; };
+		0BDD81BC183AB52F00891D35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81BB183AB52F00891D35 /* Foundation.framework */; };
+		0BDD81BE183AB52F00891D35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81BD183AB52F00891D35 /* CoreGraphics.framework */; };
+		0BDD81C0183AB52F00891D35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81BF183AB52F00891D35 /* UIKit.framework */; };
+		0BDD81C6183AB52F00891D35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0BDD81C4183AB52F00891D35 /* InfoPlist.strings */; };
+		0BDD81C8183AB52F00891D35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD81C7183AB52F00891D35 /* main.m */; };
+		0BDD81CC183AB52F00891D35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD81CB183AB52F00891D35 /* AppDelegate.m */; };
+		0BDD81CE183AB52F00891D35 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BDD81CD183AB52F00891D35 /* Images.xcassets */; };
+		0BDD81D5183AB52F00891D35 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81D4183AB52F00891D35 /* XCTest.framework */; };
+		0BDD81D6183AB52F00891D35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81BB183AB52F00891D35 /* Foundation.framework */; };
+		0BDD81D7183AB52F00891D35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81BF183AB52F00891D35 /* UIKit.framework */; };
+		0BDD81EC183AB56D00891D35 /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD81EB183AB56D00891D35 /* RadioViewController.m */; };
+		0BDD81FB183AB6B800891D35 /* Packet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD81FA183AB6B800891D35 /* Packet.m */; };
+		0BDD81FD183AB6D200891D35 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD81FC183AB6D200891D35 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BDD81D8183AB52F00891D35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BDD81B0183AB52F00891D35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0BDD81B7183AB52F00891D35;
+			remoteInfo = "iOS Radio";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B105661183DAAC900109B63 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0B105663183DAC4500109B63 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0B20D496183AB73A00BA4F12 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = Radio/Queue.h; sourceTree = "<group>"; };
+		0B20D497183AB73A00BA4F12 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = Radio/Queue.m; sourceTree = "<group>"; };
+		0B20D499183AB98200BA4F12 /* Radio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Radio.h; path = Radio/Radio.h; sourceTree = "<group>"; };
+		0B20D49A183AB98200BA4F12 /* Radio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Radio.m; path = Radio/Radio.m; sourceTree = "<group>"; };
+		0BDD81B8183AB52F00891D35 /* iOS Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BDD81BB183AB52F00891D35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0BDD81BD183AB52F00891D35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0BDD81BF183AB52F00891D35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0BDD81C3183AB52F00891D35 /* iOS Radio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS Radio-Info.plist"; sourceTree = "<group>"; };
+		0BDD81C5183AB52F00891D35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0BDD81C7183AB52F00891D35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0BDD81C9183AB52F00891D35 /* iOS Radio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS Radio-Prefix.pch"; sourceTree = "<group>"; };
+		0BDD81CA183AB52F00891D35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0BDD81CB183AB52F00891D35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0BDD81CD183AB52F00891D35 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0BDD81D3183AB52F00891D35 /* iOS RadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS RadioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BDD81D4183AB52F00891D35 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0BDD81EA183AB56D00891D35 /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
+		0BDD81EB183AB56D00891D35 /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
+		0BDD81F9183AB6B800891D35 /* Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Packet.h; path = Radio/Packet.h; sourceTree = "<group>"; };
+		0BDD81FA183AB6B800891D35 /* Packet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Packet.m; path = Radio/Packet.m; sourceTree = "<group>"; };
+		0BDD81FC183AB6D200891D35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0BDD81B5183AB52F00891D35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BDD81FD183AB6D200891D35 /* AudioToolbox.framework in Frameworks */,
+				0BDD81BE183AB52F00891D35 /* CoreGraphics.framework in Frameworks */,
+				0BDD81C0183AB52F00891D35 /* UIKit.framework in Frameworks */,
+				0BDD81BC183AB52F00891D35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BDD81D0183AB52F00891D35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BDD81D5183AB52F00891D35 /* XCTest.framework in Frameworks */,
+				0BDD81D7183AB52F00891D35 /* UIKit.framework in Frameworks */,
+				0BDD81D6183AB52F00891D35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BDD81AF183AB52F00891D35 = {
+			isa = PBXGroup;
+			children = (
+				0BDD81BA183AB52F00891D35 /* Frameworks */,
+				0BDD81C1183AB52F00891D35 /* iOS Radio */,
+				0B105661183DAAC900109B63 /* LICENSE */,
+				0BDD81B9183AB52F00891D35 /* Products */,
+				0BDD81F8183AB69E00891D35 /* Radio */,
+				0B105663183DAC4500109B63 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		0BDD81B9183AB52F00891D35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BDD81B8183AB52F00891D35 /* iOS Radio.app */,
+				0BDD81D3183AB52F00891D35 /* iOS RadioTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0BDD81BA183AB52F00891D35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BDD81FC183AB6D200891D35 /* AudioToolbox.framework */,
+				0BDD81BB183AB52F00891D35 /* Foundation.framework */,
+				0BDD81BD183AB52F00891D35 /* CoreGraphics.framework */,
+				0BDD81BF183AB52F00891D35 /* UIKit.framework */,
+				0BDD81D4183AB52F00891D35 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BDD81C1183AB52F00891D35 /* iOS Radio */ = {
+			isa = PBXGroup;
+			children = (
+				0BDD81CA183AB52F00891D35 /* AppDelegate.h */,
+				0BDD81CB183AB52F00891D35 /* AppDelegate.m */,
+				0BDD81EA183AB56D00891D35 /* RadioViewController.h */,
+				0BDD81EB183AB56D00891D35 /* RadioViewController.m */,
+				0BDD81CD183AB52F00891D35 /* Images.xcassets */,
+				0BDD81C2183AB52F00891D35 /* Supporting Files */,
+			);
+			path = "iOS Radio";
+			sourceTree = "<group>";
+		};
+		0BDD81C2183AB52F00891D35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BDD81C3183AB52F00891D35 /* iOS Radio-Info.plist */,
+				0BDD81C4183AB52F00891D35 /* InfoPlist.strings */,
+				0BDD81C7183AB52F00891D35 /* main.m */,
+				0BDD81C9183AB52F00891D35 /* iOS Radio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0BDD81F8183AB69E00891D35 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				0BDD81F9183AB6B800891D35 /* Packet.h */,
+				0BDD81FA183AB6B800891D35 /* Packet.m */,
+				0B20D496183AB73A00BA4F12 /* Queue.h */,
+				0B20D497183AB73A00BA4F12 /* Queue.m */,
+				0B20D499183AB98200BA4F12 /* Radio.h */,
+				0B20D49A183AB98200BA4F12 /* Radio.m */,
+			);
+			name = Radio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0BDD81B7183AB52F00891D35 /* iOS Radio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BDD81E4183AB52F00891D35 /* Build configuration list for PBXNativeTarget "iOS Radio" */;
+			buildPhases = (
+				0BDD81B4183AB52F00891D35 /* Sources */,
+				0BDD81B5183AB52F00891D35 /* Frameworks */,
+				0BDD81B6183AB52F00891D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Radio";
+			productName = "iOS Radio";
+			productReference = 0BDD81B8183AB52F00891D35 /* iOS Radio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0BDD81D2183AB52F00891D35 /* iOS RadioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0BDD81E7183AB52F00891D35 /* Build configuration list for PBXNativeTarget "iOS RadioTests" */;
+			buildPhases = (
+				0BDD81CF183AB52F00891D35 /* Sources */,
+				0BDD81D0183AB52F00891D35 /* Frameworks */,
+				0BDD81D1183AB52F00891D35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0BDD81D9183AB52F00891D35 /* PBXTargetDependency */,
+			);
+			name = "iOS RadioTests";
+			productName = "iOS RadioTests";
+			productReference = 0BDD81D3183AB52F00891D35 /* iOS RadioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BDD81B0183AB52F00891D35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Hamed Hashemi";
+				TargetAttributes = {
+					0BDD81D2183AB52F00891D35 = {
+						TestTargetID = 0BDD81B7183AB52F00891D35;
+					};
+				};
+			};
+			buildConfigurationList = 0BDD81B3183AB52F00891D35 /* Build configuration list for PBXProject "iOS Radio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0BDD81AF183AB52F00891D35;
+			productRefGroup = 0BDD81B9183AB52F00891D35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0BDD81B7183AB52F00891D35 /* iOS Radio */,
+				0BDD81D2183AB52F00891D35 /* iOS RadioTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BDD81B6183AB52F00891D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B105662183DAAC900109B63 /* LICENSE in Resources */,
+				0BDD81C6183AB52F00891D35 /* InfoPlist.strings in Resources */,
+				0B105664183DAC4500109B63 /* README.md in Resources */,
+				0BDD81CE183AB52F00891D35 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BDD81D1183AB52F00891D35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0BDD81B4183AB52F00891D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B20D498183AB73A00BA4F12 /* Queue.m in Sources */,
+				0BDD81EC183AB56D00891D35 /* RadioViewController.m in Sources */,
+				0BDD81CC183AB52F00891D35 /* AppDelegate.m in Sources */,
+				0B20D49B183AB98200BA4F12 /* Radio.m in Sources */,
+				0BDD81C8183AB52F00891D35 /* main.m in Sources */,
+				0BDD81FB183AB6B800891D35 /* Packet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BDD81CF183AB52F00891D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0BDD81D9183AB52F00891D35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0BDD81B7183AB52F00891D35 /* iOS Radio */;
+			targetProxy = 0BDD81D8183AB52F00891D35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0BDD81C4183AB52F00891D35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0BDD81C5183AB52F00891D35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0BDD81E2183AB52F00891D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0BDD81E3183AB52F00891D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0BDD81E5183AB52F00891D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS Radio/iOS Radio-Prefix.pch";
+				INFOPLIST_FILE = "iOS Radio/iOS Radio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0BDD81E6183AB52F00891D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS Radio/iOS Radio-Prefix.pch";
+				INFOPLIST_FILE = "iOS Radio/iOS Radio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0BDD81E8183AB52F00891D35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS Radio.app/iOS Radio";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS Radio/iOS Radio-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iOS RadioTests/iOS RadioTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0BDD81E9183AB52F00891D35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS Radio.app/iOS Radio";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS Radio/iOS Radio-Prefix.pch";
+				INFOPLIST_FILE = "iOS RadioTests/iOS RadioTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0BDD81B3183AB52F00891D35 /* Build configuration list for PBXProject "iOS Radio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BDD81E2183AB52F00891D35 /* Debug */,
+				0BDD81E3183AB52F00891D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BDD81E4183AB52F00891D35 /* Build configuration list for PBXNativeTarget "iOS Radio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BDD81E5183AB52F00891D35 /* Debug */,
+				0BDD81E6183AB52F00891D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0BDD81E7183AB52F00891D35 /* Build configuration list for PBXNativeTarget "iOS RadioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BDD81E8183AB52F00891D35 /* Debug */,
+				0BDD81E9183AB52F00891D35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BDD81B0183AB52F00891D35 /* Project object */;
+}
