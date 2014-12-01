@@ -79,7 +79,8 @@
 	NSString *connectionUserAgent;
 }
 
-- (id)init:(NSString *)userAgent;
+- (id)init:(NSString *)userAgent __deprecated_msg("Use initWithUserAgent instead");
+- (id)initWithUserAgent:(NSString *)userAgent;
 - (BOOL)connect:(NSString *)url withDelegate:(NSObject<RadioDelegate> *)delegate withGain:(float)gain;
 - (void)updateGain:(float)value;
 - (void)updatePlay:(BOOL)play;
