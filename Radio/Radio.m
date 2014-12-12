@@ -37,16 +37,27 @@
 
 #pragma mark - stream connection
 
-- (id)init:(NSString *)userAgent {
+- (id)init {
     self = [super init];
-	if (self != nil) {
-		playing = YES;
-		stopped = NO;
-		connectionUserAgent = userAgent;
+    if (self != nil) {
+        playing = YES;
+        stopped = NO;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleRouteChange:) name:AVAudioSessionRouteChangeNotification object:[AVAudioSession sharedInstance]];
-	}
-	return self;
+    }
+    return self;
+}
+
+- (id)initWithUserAgent:(NSString *)userAgent {
+    self = [self init];
+    if (self != nil) {
+        connectionUserAgent = userAgent;
+    }
+    return self;
+}
+
+- (id)init:(NSString *)userAgent {
+    return [self initWithUserAgent:userAgent];
 }
 
 - (BOOL)connect: (NSString *)connectUrl withDelegate:(NSObject <RadioDelegate> *)delegate withGain:(float)gain {
@@ -91,7 +102,7 @@
         NSLog(@"connecting to url %@", u);
     }
 	NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:u];
-	[req setCachePolicy:NSURLCacheStorageNotAllowed];
+    [req setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 	[req setValue:@"1" forHTTPHeaderField:@"icy-metadata"];
 	[req setValue:@"no-cache" forHTTPHeaderField:@"Cache-Control"];
 	[req setValue:connectionUserAgent forHTTPHeaderField:@"User-Agent"];

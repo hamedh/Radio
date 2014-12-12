@@ -42,7 +42,7 @@
     self.view.clipsToBounds = YES;
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    radio = [[Radio alloc] init:@"my app"];
+    radio = [[Radio alloc] initWithUserAgent:@"my app"];
     [radio connect:STREAM_URL withDelegate:self withGain:(1.0)];
     playing = YES;
     
